@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://028erbxlh0hb"]
+
+[ext_resource type="Script" path="res://map.gd" id="1_0qycm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifbp4"]
+size = Vector2(557, 2412)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foevn"]
+size = Vector2(564.5, 2412)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hhpc"]
+size = Vector2(5, 2405)
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_0qycm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-10, 1214)
+shape = SubResource("RectangleShape2D_ifbp4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(955.75, 1214)
+shape = SubResource("RectangleShape2D_foevn")
+
+[node name="StaticBody2D3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(471.5, 1192.5)
+shape = SubResource("RectangleShape2D_1hhpc")

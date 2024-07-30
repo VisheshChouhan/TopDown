@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceafe2vx8o7xc"]
+
+[ext_resource type="Script" path="res://hurdle1.gd" id="1_6tlmf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3mpy"]
+size = Vector2(80, 77.1856)
+
+[node name="Hurdle1" type="Area2D"]
+script = ExtResource("1_6tlmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.91273, 2.72)
+shape = SubResource("RectangleShape2D_a3mpy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
